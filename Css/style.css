@@ -389,7 +389,7 @@ img {
 /* about  */
 
 .about-img {
-  width: 200px;
+  width: 280px;
   border: 0.5rem;
   justify-self: center;
   align-items: center;
@@ -1040,10 +1040,11 @@ img {
 
   .about-container {
     column-gap: 5rem;
+    align-items: center;
   }
 
   .about-img {
-    width: 350px;
+    width: 420px;
   }
 
   .about-description {
