@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <div id="vanta-bg"></div>
     <!-- header  -->
     <header class="header" id="header">
       <nav class="nav container">
@@ -113,7 +114,7 @@
                     class="home-blob-img"
                     x="-15"
                     y="-5"
-                    href="Assets/Icons/logo.jpeg"
+                    href="Assets/profile.png"
                   />
                 </g>
               </svg>
@@ -122,8 +123,10 @@
             <div class="home-data">
               <h1 class="home-title">Hi, I am <span id="typed-name"></span></h1>
               <h3 class="home-subtitle">Full Stack Developer</h3>
-              <p class="home-description">
-                Full stack developer crafting seamless front-to-back solutions
+              <p class="home-description" style="font-size: 1.15rem; font-weight: 500; margin-bottom: 2rem;">
+                <span style="color: var(--title-color); font-weight: bold;">Full Stack</span><span style="color: var(--first-color); font-weight: bold; font-size: 1.3rem;">.</span> 
+                <span style="color: var(--title-color); font-weight: bold;">Full Vision</span><span style="color: var(--first-color); font-weight: bold; font-size: 1.3rem;">.</span> 
+                <span style="color: var(--title-color); font-weight: bold;">Full Impact</span><span style="color: var(--first-color); font-weight: bold; font-size: 1.3rem;">.</span>
               </p>
               <a href="#contact" class="button button-flex">
                 Contact Me <i class="fa-regular fa-envelope button-icon"></i>
@@ -150,19 +153,14 @@
 
           <div class="about-data">
             <p class="about-description">
-              An accomplished Full Stack Developer with a passion for building
-              robust and dynamic web applications. Skilled in JavaScript, TypeScript, React.js,
-              Node.js, Express.js, and PostgreSQL, I specialize in delivering seamless
-              user experiences paired with scalable backend solutions. With a
-              keen eye for design and clean architecture, I turn ideas into
-              functional, maintainable, and visually compelling digital products.
+              Software Engineer specializing in Full Stack Development with React, Node.js, and SQL/NoSQL databases. Passionate about building scalable applications, solving complex problems, and leveraging AI to deliver clean, maintainable, and efficient solutions.
             </p>
 
             
             <div class="about-buttons">
               <a
                 download=""
-                href="/Assets/Srinadh.pdf"
+                href="Assets/Resume.pdf"
                 class="button button-flex"
               >
                 Download Resume<i
@@ -179,40 +177,77 @@
         <h2 class="section-title">Skills</h2>
         <br>
         <div class="skills-content container">
-  <!-- Frontend Technologies -->
-  <div class="skills-name">HTML</div>
-  <div class="skills-name">CSS</div>
-  <div class="skills-name">JavaScript</div>
-  <div class="skills-name">TypeScript</div>
-  <div class="skills-name">React JS</div>
-  <div class="skills-name">React Native</div>
-  <div class="skills-name">Tailwind CSS</div>
-  <div class="skills-name">Bootstrap</div>
-
-  <!-- Backend Technologies -->
-  <div class="skills-name">Node JS</div>
-  <div class="skills-name">Express JS</div>
+  <!-- Languages -->
   <div class="skills-name">Java</div>
   <div class="skills-name">Python</div>
-  <div class="skills-name">C Programming</div>
+  <div class="skills-name">JavaScript</div>
+  <div class="skills-name">TypeScript</div>
+  <div class="skills-name">C</div>
 
-  <!-- Databases -->
+  <!-- Front-End Development -->
+  <div class="skills-name">React.js</div>
+  <div class="skills-name">Next.js</div>
+  <div class="skills-name">HTML</div>
+  <div class="skills-name">CSS</div>
+
+  <!-- Back-End Development -->
+  <div class="skills-name">Node.js</div>
+  <div class="skills-name">Express.js</div>
+  <div class="skills-name">Nest.js</div>
+  <div class="skills-name">FastAPI</div>
+
+  <!-- Database Systems -->
   <div class="skills-name">MySQL</div>
   <div class="skills-name">PostgreSQL</div>
   <div class="skills-name">MongoDB</div>
+  <div class="skills-name">MariaDB</div>
 
-  <!-- Core Concepts -->
-  <div class="skills-name">DSA</div>
-  <div class="skills-name">OOPS</div>
+  <!-- AI & Machine Learning -->
+  <div class="skills-name">Machine Learning</div>
+  <div class="skills-name">Deep Learning</div>
+  <div class="skills-name">NLP</div>
+  <div class="skills-name">RAG</div>
+  <div class="skills-name">Prompt Engineering</div>
+
+  <!-- Libraries & Frameworks -->
+  <div class="skills-name">Scikit-learn</div>
+  <div class="skills-name">Pandas</div>
+  <div class="skills-name">NumPy</div>
+  <div class="skills-name">NLTK</div>
 
   <!-- Tools & Technologies -->
   <div class="skills-name">Git</div>
-  <div class="skills-name">GitHub</div>
   <div class="skills-name">VS Code</div>
-  <div class="skills-name">DevOps</div>
-  <div class="skills-name">LaTeX</div>
+  <div class="skills-name">Postman</div>
+  <div class="skills-name">Antigravity</div>
 </div>
       </section>
+
+      <!-- experience  -->
+      <section class="experience section" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <br>
+        <div class="qualification-container container">
+          <div class="qualification-section">
+            <div class="qualification-content qualification-active" data-content>
+              <div class="qualification-data">
+                <div>
+                  <h3 class="qualification-title">Full Stack Developer</h3>
+                  <span class="qualification-subtitle">Resonira Technologies - Karimnagar, Telangana</span>
+                  <div class="qualification-date" style="margin-top: 10px;">
+                    Architecting seamless and scalable web experiences.
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification-round"></span>
+                  <span class="qualification-line"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <section class="qualification section">
         <h2 class="section-title">Education</h2>
        
@@ -297,12 +332,9 @@
              
             </div>
 
-         
-            
           </div>
         </div>
       </section>
-
       
 
       <!-- portfolio -->
@@ -312,14 +344,31 @@
 
         <div class="portfolio-container container swiper-container">
           <div class="swiper-wrapper">
-            <!-- project1: Social Media Application -->
+            <!-- project1: Background Verification Platform -->
+            <div class="portfolio-content grid swiper-slide">
+              <img src="Assets/bg_verification.jpg" alt="Background Verification Platform Dashboard" class="portfolio-img" />
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">Background Verification Platform</h3>
+                <p class="portfolio-description">
+                  Developed scalable RESTful APIs for a real-time Background Verification platform supporting identity and document verification.
+                </p>
+                <a
+                  href="#"
+                  class="button button-flex button-small portfolio-button"
+                  >Real-Time Project
+                  <i class="fa-solid fa-arrow-right button-icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- project2: Social Media Application -->
             <div class="portfolio-content grid swiper-slide">
               <img src="Assets/Pro2.jpg" alt="" class="portfolio-img" />
 
               <div class="portfolio-data">
                 <h3 class="portfolio-title">Social Media Application with Real Time Chat</h3>
                 <p class="portfolio-description">
-                  Developed a full stack social media app with real-time chat, enabling instant messaging and user interaction.
+                  Developed a full stack social media app using React.js, Node.js, Express.js, and PostgreSQL with real-time chat, instant messaging, and secure authentication.
                 </p>
                 <a
                   href="https://github.com/Srinadh0219/Sociam-Media-Application-Real-Time-Chat"
@@ -331,39 +380,18 @@
               </div>
             </div>
 
-            <!-- project2: Pastebin Application -->
+            <!-- project3: AI Chatbot -->
             <div class="portfolio-content grid swiper-slide">
-              <img src="Assets/pastebin.png" alt="" class="portfolio-img" />
-
+              <img src="Assets/ai_chatbot.jpg" alt="AI Chatbot Interface" class="portfolio-img" />
               <div class="portfolio-data">
-                <h3 class="portfolio-title">Pastebin Web Application</h3>
+                <h3 class="portfolio-title">AI Chatbot for Kraves Job Portal</h3>
                 <p class="portfolio-description">
-                  A full-stack secure snippet sharing platform allowing users to store and share code pastes with custom, time-based or view-count expiration settings.
+                  Developed and integrated an AI-powered chatbot using FastAPI, React.js, and ChromaDB for Retrieval-Augmented Generation (RAG) to assist candidates with queries and status tracking.
                 </p>
                 <a
-                  href="https://github.com/Srinadh0219/Pastebin-Web-Application"
-                  target="_blank"
+                  href="#"
                   class="button button-flex button-small portfolio-button"
-                  >Project Link
-                  <i class="fa-solid fa-arrow-right button-icon"></i>
-                </a>
-              </div>
-            </div>
-
-            <!-- project3: GenAI Gallery -->
-            <div class="portfolio-content grid swiper-slide">
-              <img src="Assets/genai_gallery_v3.png" alt="" class="portfolio-img" />
-
-              <div class="portfolio-data">
-                <h3 class="portfolio-title">GenAI Gallery</h3>
-                <p class="portfolio-description">
-                  A MERN stack platform that generates high-quality AI images in real-time using text prompts, with integrated Cloudinary media hosting and community sharing.
-                </p>
-                <a
-                  href="https://github.com/Srinadh0219/GenAI-Gallery"
-                  target="_blank"
-                  class="button button-flex button-small portfolio-button"
-                  >Project Link
+                  >Real-Time Project
                   <i class="fa-solid fa-arrow-right button-icon"></i>
                 </a>
               </div>
@@ -388,7 +416,45 @@
               </div>
             </div>
 
-            <!-- project5: Snake Game -->
+            <!-- project5: Pastebin Application -->
+            <div class="portfolio-content grid swiper-slide">
+              <img src="Assets/pastebin.png" alt="" class="portfolio-img" />
+
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">Pastebin Web Application</h3>
+                <p class="portfolio-description">
+                  A full-stack secure snippet sharing platform allowing users to store and share code pastes with custom, time-based or view-count expiration settings.
+                </p>
+                <a
+                  href="https://github.com/Srinadh0219/Pastebin-Web-Application"
+                  target="_blank"
+                  class="button button-flex button-small portfolio-button"
+                  >Project Link
+                  <i class="fa-solid fa-arrow-right button-icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- project6: GenAI Gallery -->
+            <div class="portfolio-content grid swiper-slide">
+              <img src="Assets/genai_gallery_v3.png" alt="" class="portfolio-img" />
+
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">GenAI Gallery</h3>
+                <p class="portfolio-description">
+                  A MERN stack platform that generates high-quality AI images in real-time using text prompts, with integrated Cloudinary media hosting and community sharing.
+                </p>
+                <a
+                  href="https://github.com/Srinadh0219/GenAI-Gallery"
+                  target="_blank"
+                  class="button button-flex button-small portfolio-button"
+                  >Project Link
+                  <i class="fa-solid fa-arrow-right button-icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- project7: Snake Game -->
             <div class="portfolio-content grid swiper-slide">
               <img src="Assets/snake_game.png" alt="" class="portfolio-img" />
 
@@ -407,7 +473,7 @@
               </div>
             </div>
 
-            <!-- project6: Portfolio -->
+            <!-- project8: Portfolio -->
             <div class="portfolio-content grid swiper-slide">
               <img src="Assets/Pro3.png" alt="" class="portfolio-img" />
 
@@ -567,6 +633,30 @@
       },{threshold:0.15});
       document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>io.observe(el));
     })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Read CSS variables for colors if needed, but hardcoding the theme's primary color is safest
+        // HSL(250, 69%, 61%) is approx 0x7a51e8
+        VANTA.NET({
+          el: "#vanta-bg",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x7a51e8,
+          backgroundColor: 0x000000,
+          backgroundAlpha: 0.0, // Transparent so light/dark mode background color shows through
+          points: 12.00,
+          maxDistance: 22.00,
+          spacing: 18.00
+        });
+      });
     </script>
   </body>
 </html>
