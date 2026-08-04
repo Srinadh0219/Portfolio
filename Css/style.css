@@ -70,13 +70,13 @@ body.dark-theme {
 .nav-btns {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 /* theme  */
 .change-theme {
   font-size: 1.25rem;
   color: var(--title-color);
-  margin-right: 1rem;
   cursor: pointer;
 }
 
@@ -447,12 +447,12 @@ img {
 .skills-content {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .skills-name {
   padding: 0.8rem 1.25rem;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
   font-size: var(--small-font-size);
   background: var(--first-color-lighter);
   border-radius: 5px;
