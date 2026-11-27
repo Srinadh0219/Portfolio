@@ -111,24 +111,19 @@ function scrollUp() {
 window.addEventListener("scroll", scrollUp);
 
 //dark light mode------------------
-const darkTheme = "dark-theme";
 const themeButton = document.getElementById("theme-button");
+const lightTheme = "light-theme";
+const darkTheme = "dark-theme";
 
-// Previously selected theme (if user selected)
-const selectedTheme = localStorage.getItem("selected-theme");
-
-// Default to dark theme unless user explicitly chose "light"
-if (selectedTheme === "light") {
-  document.body.classList.remove(darkTheme);
-} else {
-  document.body.classList.add(darkTheme);
-}
+// Always default to black/dark theme on page load / open link
+document.body.classList.remove(lightTheme);
+document.body.classList.add(darkTheme);
+localStorage.removeItem("selected-theme"); // Clear any cached light theme
 
 // Function to toggle dark/light theme
 function toggleTheme() {
+  document.body.classList.toggle(lightTheme);
   document.body.classList.toggle(darkTheme);
-  const isDark = document.body.classList.contains(darkTheme);
-  localStorage.setItem("selected-theme", isDark ? "dark" : "light");
 }
 
 if (themeButton) {

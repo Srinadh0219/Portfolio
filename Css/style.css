@@ -6,17 +6,19 @@
   --hue-color: 250;
 
   --first-color: hsl(var(--hue-color), 69%, 61%);
-  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-  --title-color: hsl(var(--hue-color), 8%, 15%);
-  --text-color: hsl(var(--hue-color), 8%, 45%);
+
+  /* DEFAULT THEME IS BLACK / DARK THEME */
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
-  --container-color: #fff;
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 10%);
+  --container-color: hsl(var(--hue-color), 29%, 14%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 25%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 35%);
 
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
@@ -56,14 +58,28 @@
   }
 }
 
-/* dark color scheme  */
+/* dark theme (default) */
 body.dark-theme {
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 75%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 28%, 12%);
-  --container-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 10%);
+  --container-color: hsl(var(--hue-color), 29%, 14%);
+  transition: 0.3s ease-in;
+}
+
+/* light theme (active when toggled) */
+body.light-theme {
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
   transition: 0.3s ease-in;
 }
 
@@ -86,81 +102,79 @@ body.dark-theme {
 }
 
 .theme-switch:hover {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .theme-switch-track {
   position: relative;
   display: block;
-  width: 50px;
-  height: 26px;
-  border-radius: 20px;
-  background-color: #e2e8f0;
-  border: 1.5px solid #cbd5e1;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  width: 52px;
+  height: 28px;
+  border-radius: 9999px;
+  background-color: #1e1b2e;
+  border: 1.5px solid #7a51e8;
+  box-shadow: 0 0 10px rgba(122, 81, 232, 0.45);
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
               border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
               box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body.dark-theme .theme-switch-track {
-  background-color: #12101e;
-  border-color: #7a51e8;
-  box-shadow: 0 0 10px rgba(122, 81, 232, 0.4), inset 0 1px 2px rgba(0, 0, 0, 0.5);
+body.light-theme .theme-switch-track {
+  background-color: #9aa0a6;
+  border-color: #80868b;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* The sliding pin (knob) */
 .theme-switch-pin {
   position: absolute;
   top: 2px;
-  left: 2px;
-  width: 19px;
-  height: 19px;
+  left: 3px;
+  width: 21px;
+  height: 21px;
   border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              background 0.3s ease,
-              box-shadow 0.3s ease;
+              background-color 0.3s ease;
 }
 
-/* Light Theme: Pin is on the LEFT side (transform: translateX(0)) */
-body:not(.dark-theme) .theme-switch-pin {
+/* Black Theme (Default): Pin is on the LEFT */
+.theme-switch-pin {
   transform: translateX(0);
 }
 
-/* Default Dark Theme: Pin slides to the RIGHT side */
-body.dark-theme .theme-switch-pin {
+/* Light Theme (when toggled): Pin slides to the RIGHT */
+body.light-theme .theme-switch-pin {
   transform: translateX(23px);
-  background: linear-gradient(135deg, #a78bfa, #7a51e8);
-  box-shadow: 0 0 8px rgba(122, 81, 232, 0.75);
 }
 
 /* Pin Icons */
 .theme-switch-pin i {
-  font-size: 0.65rem;
   line-height: 1;
 }
 
-.pin-icon-dark {
-  display: none;
-  color: #ffffff !important;
-}
-
-.pin-icon-light {
+.theme-switch-pin .icon-moon {
   display: block;
-  color: #78350f !important;
+  font-size: 0.75rem;
+  color: #1e1b2e;
 }
 
-body.dark-theme .pin-icon-dark {
-  display: block;
-}
-
-body.dark-theme .pin-icon-light {
+.theme-switch-pin .icon-sun {
   display: none;
+  font-size: 0.8rem;
+  color: #000000;
+}
+
+body.light-theme .theme-switch-pin .icon-moon {
+  display: none;
+}
+
+body.light-theme .theme-switch-pin .icon-sun {
+  display: block;
 }
 
 /* theme  */
