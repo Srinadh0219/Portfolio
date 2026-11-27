@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="dark-theme">
     <div id="vanta-bg"></div>
     <!-- header  -->
     <header class="header" id="header">
@@ -45,9 +45,13 @@
                 ><i class="fa-solid fa-message nav-icon"></i> Contact</a
               >
             </li>
-            <li class="nav-item">
-              <div class="nav-link" style="cursor: pointer;" onclick="document.getElementById('theme-button').click()">
-                <i class="fa-regular fa-moon change-theme nav-icon" id="theme-button" style="pointer-events: none;"></i> Theme
+            <li class="nav-item nav-theme-item">
+              <div class="theme-toggle" id="theme-button" role="button" tabindex="0" title="Toggle dark / light theme" aria-label="Toggle theme">
+                <span class="theme-toggle-track">
+                  <i class="fa-solid fa-sun theme-icon-sun"></i>
+                  <i class="fa-solid fa-moon theme-icon-moon"></i>
+                  <span class="theme-toggle-knob"></span>
+                </span>
               </div>
             </li>
           </ul>
@@ -55,6 +59,14 @@
         </div>
 
         <div class="nav-btns">
+          <div class="theme-toggle theme-toggle-header" id="theme-button-header" role="button" tabindex="0" title="Toggle dark / light theme" aria-label="Toggle theme">
+            <span class="theme-toggle-track">
+              <i class="fa-solid fa-sun theme-icon-sun"></i>
+              <i class="fa-solid fa-moon theme-icon-moon"></i>
+              <span class="theme-toggle-knob"></span>
+            </span>
+          </div>
+
           <div class="nav-toggle" id="nav-toggle">
             <i class="fa-solid fa-bars"></i>
           </div>

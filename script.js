@@ -111,39 +111,34 @@ function scrollUp() {
 window.addEventListener("scroll", scrollUp);
 
 //dark light mode------------------
-const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
-const iconTheme = "fa-sun";
+const themeToggles = document.querySelectorAll(".theme-toggle");
 
-// Previously selected topic (if user selected)
+// Previously selected theme (if user selected)
 const selectedTheme = localStorage.getItem("selected-theme");
-const selectedIcon = localStorage.getItem("selected-icon");
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () =>
-  document.body.classList.contains(darkTheme) ? "dark" : "light";
-const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "fa-moon" : "fa-sun";
-
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme
-  );
-  themeButton.classList[selectedIcon === "fa-moon" ? "add" : "remove"](
-    iconTheme
-  );
+// Default to dark theme unless user explicitly chose "light"
+if (selectedTheme === "light") {
+  document.body.classList.remove(darkTheme);
+} else {
+  document.body.classList.add(darkTheme);
 }
 
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener("click", () => {
-  // Add or remove the dark / icon theme
+// Function to toggle dark/light theme
+function toggleTheme() {
   document.body.classList.toggle(darkTheme);
-  themeButton.classList.toggle(iconTheme);
-  // We save the theme and the current icon that the user chose
-  localStorage.setItem("selected-theme", getCurrentTheme());
-  localStorage.setItem("selected-icon", getCurrentIcon());
+  const isDark = document.body.classList.contains(darkTheme);
+  localStorage.setItem("selected-theme", isDark ? "dark" : "light");
+}
+
+themeToggles.forEach((toggle) => {
+  toggle.addEventListener("click", toggleTheme);
+  toggle.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleTheme();
+    }
+  });
 });
 
 //swiper
