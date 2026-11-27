@@ -112,7 +112,7 @@ window.addEventListener("scroll", scrollUp);
 
 //dark light mode------------------
 const darkTheme = "dark-theme";
-const themeToggles = document.querySelectorAll(".theme-toggle");
+const themeButton = document.getElementById("theme-button");
 
 // Previously selected theme (if user selected)
 const selectedTheme = localStorage.getItem("selected-theme");
@@ -131,15 +131,15 @@ function toggleTheme() {
   localStorage.setItem("selected-theme", isDark ? "dark" : "light");
 }
 
-themeToggles.forEach((toggle) => {
-  toggle.addEventListener("click", toggleTheme);
-  toggle.addEventListener("keydown", (e) => {
+if (themeButton) {
+  themeButton.addEventListener("click", toggleTheme);
+  themeButton.addEventListener("keydown", (e) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       toggleTheme();
     }
   });
-});
+}
 
 //swiper
 let swiperPortfolio = new Swiper(".portfolio-container", {
